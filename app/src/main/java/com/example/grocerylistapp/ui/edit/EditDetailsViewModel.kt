@@ -34,11 +34,6 @@ class EditDetailsViewModel(
         _pendingItems.value = _pendingItems.value.filter { it.id != item.id }
     }
 
-    fun updateItem(updatedItem: Item) {
-        _pendingItems.value = _pendingItems.value.map { item ->
-            if(item.id == updatedItem.id) updatedItem else item
-        }
-    }
     fun updateList(name: String, desc: String) {
         val updatedList = _list.value?.copy(
             name = name,
