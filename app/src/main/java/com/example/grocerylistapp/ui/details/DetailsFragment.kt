@@ -1,5 +1,6 @@
 package com.example.grocerylistapp.ui.details
 
+import android.annotation.SuppressLint
 import android.graphics.Paint
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -31,6 +32,7 @@ class DetailsFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getListById(args.listId)

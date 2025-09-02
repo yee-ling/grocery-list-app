@@ -17,7 +17,7 @@ class GroceryListsAdapter(
     }
 
     override fun onBindViewHolder(
-        holder: GroceryListsAdapter.GroceryListViewHolder,
+        holder: GroceryListViewHolder,
         position: Int
     ) {
         val list = groceryLists[position]
