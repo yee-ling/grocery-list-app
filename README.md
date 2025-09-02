@@ -16,3 +16,6 @@ An Android app that simplifies shopping by allowing users to manage grocery list
 - [Details](screenshots/details.png)
 - [Edit Details](screenshots/editDetails.png)
 - [Delete List](screenshots/deleteList.png)
+
+## Download APK
+[GroceryListApp.apk](APK/GroceryListApp.apk)
