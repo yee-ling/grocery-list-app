@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.grocerylistapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_addList"
+            app:destination="@id/addListFragment" />
+
+        <action
+            android:id="@+id/action_home_to_details"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addListFragment"
+        android:name="com.example.grocerylistapp.ui.list.AddListFragment"
+        android:label="fragment_add_list"
+        tools:layout="@layout/fragment_add_list" >
+        <action
+            android:id="@+id/action_addList_to_addItem"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.grocerylistapp.ui.item.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <argument android:name="list_id" app:argType="integer" android:defaultValue="-1"/>
+        <action
+            android:id="@+id/action_addItem_to_addCategory"
+            app:destination="@id/addCategoryFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addCategoryFragment"
+        android:name="com.example.grocerylistapp.ui.category.AddCategoryFragment"
+        android:label="fragment_add_category"
+        tools:layout="@layout/fragment_add_category" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.grocerylistapp.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument android:name="list_id" app:argType="integer"/>
+        <action
+            android:id="@+id/action_details_to_editDetails"
+            app:destination="@id/editDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDetailsFragment"
+        android:name="com.example.grocerylistapp.ui.edit.EditDetailsFragment"
+        android:label="fragment_edit_details"
+        tools:layout="@layout/fragment_edit_details">
+        <argument android:name="list_id" app:argType="integer"/>
+        <action
+            android:id="@+id/action_editDetails_to_addItem"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/xs"
+    tools:context=".ui.edit.EditDetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Edit Details"
+            app:titleCentered="true"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/etListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xs"
+        android:layout_marginHorizontal="@dimen/xl"
+        android:background="@drawable/edit_text_bg"
+        android:textSize="@dimen/tx_l"
+        android:maxLength="45"
+        android:paddingVertical="@dimen/xxs"
+        android:paddingHorizontal="@dimen/xxs"
+        android:textStyle="bold"
+        android:text="@string/edit_list_name"/>
+
+    <EditText
+        android:id="@+id/etListDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xl"
+        android:layout_marginHorizontal="@dimen/xl"
+        android:background="@drawable/edit_text_bg"
+        android:textSize="@dimen/tx_l"
+        android:maxLength="45"
+        android:paddingVertical="@dimen/xxs"
+        android:paddingHorizontal="@dimen/xxs"
+        android:text="@string/edit_list_desc"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxxxs"
+        android:layout_marginVertical="@dimen/l"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/llEditItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbAddMoreItem"
+            app:backgroundTint="@color/sage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/l"
+            android:text="@string/add_more_item"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/save"/>
+    </LinearLayout>
+</LinearLayout>

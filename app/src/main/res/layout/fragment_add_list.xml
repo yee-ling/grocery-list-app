@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".ui.list.AddListFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/xxxs">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Add List"
+            app:titleCentered="true"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/etGroceryListName"
+        android:background="@drawable/edit_text_bg"
+        android:padding="@dimen/m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxxxs"
+        android:maxLength="45"
+        android:hint="@string/grocery_list_name"/>
+
+    <EditText
+        android:id="@+id/etGroceryListDesc"
+        android:background="@drawable/edit_text_bg"
+        android:padding="@dimen/m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m"
+        android:maxLength="45"
+        android:hint="@string/grocery_list_description"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbAddItem"
+        app:backgroundTint="@color/sage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/xxxxl"
+        android:layout_marginTop="@dimen/l"
+        android:layout_marginBottom="@dimen/s"
+        android:text="@string/add_item"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/s"/>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/xl"
+        android:layout_marginTop="@dimen/xl"
+        android:layout_marginBottom="@dimen/xl"
+        android:text="@string/submit_list"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"/>
+
+</LinearLayout>

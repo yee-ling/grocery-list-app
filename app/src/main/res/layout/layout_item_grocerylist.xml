@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/xl"
+    app:cardBackgroundColor="@color/lilac"
+    android:layout_margin="@dimen/l">
+
+    <LinearLayout
+        android:id="@+id/llGroceryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/l">
+
+        <TextView
+            android:id="@+id/tvListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tx_xl"
+            android:text="@string/grocery_list"/>
+
+        <TextView
+            android:id="@+id/tvListDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxs"
+            android:textSize="@dimen/tx_l"
+            android:text="@string/short_description"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

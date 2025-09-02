@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/xxl"
+    tools:context=".ui.category.AddCategoryFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tx_xl"
+        android:gravity="center"
+        android:text="@string/add_category"/>
+
+    <EditText
+        android:id="@+id/etCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xl"
+        android:maxLength="40"
+        android:hint="@string/category_name"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbAddCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/xl"
+        android:layout_marginVertical="@dimen/xl"
+        android:text="@string/add_category"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"/>
+</LinearLayout>

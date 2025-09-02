@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/s"
+    tools:context=".ui.item.AddItemFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/xxxs">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Add Item"
+            app:titleCentered="true"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/etItemName"
+        android:background="@drawable/edit_text_bg"
+        android:padding="@dimen/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="45"
+        android:hint="@string/item_name"/>
+
+    <EditText
+        android:id="@+id/etItemQuantity"
+        android:background="@drawable/edit_text_bg"
+        android:padding="@dimen/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="numberSigned"
+        android:hint="@string/item_quantity"/>
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_marginTop="@dimen/xl"
+        android:background="@color/lilac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/s"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabSubmitItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/xl"
+        android:layout_marginTop="@dimen/xl"
+        android:layout_marginBottom="@dimen/xl"
+        android:text="@string/submit_item"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"/>
+
+</LinearLayout>
